@@ -2,10 +2,10 @@
 FROM python:3.9-slim
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /hello-world-app
 
 # Copy the requirements file into the container
-COPY /app/requirements.txt .
+COPY /hello-world-app/requirements.txt .
 
 # Install the required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
@@ -17,7 +17,7 @@ COPY . .
 EXPOSE 5000
 
 # Define environment variable
-ENV FLASK_APP=app.py
+ENV FLASK_APP=/hello-world-app/app.py
 
 # Command to run the Flask app
 CMD ["flask", "run", "--host=0.0.0.0"]
