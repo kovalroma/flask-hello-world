@@ -12,7 +12,7 @@ def index():
     # Get the IP address of the server
     server_ip = request.host.split(':')[0]
 
-    return render_template('./templates/index.html', current_date=current_date, server_ip=server_ip)
+    return render_template('templates/index.html', current_date=current_date, server_ip=server_ip)
 
 
 if __name__ == '__main__':
