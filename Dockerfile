@@ -11,7 +11,7 @@ COPY /hello-world-app/requirements.txt /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code into the container
-COPY . .
+COPY hello-world-app/ .
 
 # Expose port 5000 for the Flask app
 EXPOSE 5000
