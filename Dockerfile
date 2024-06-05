@@ -16,8 +16,7 @@ COPY . .
 # Expose port 5000 for the Flask app
 EXPOSE 5000
 
-# Define environment variable
-ENV FLASK_APP=/hello-world-app/app.py
+
 
 # Command to run the Flask app
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["python", "/app/app.py", "--host=0.0.0.0"]
