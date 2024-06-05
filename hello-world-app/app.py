@@ -12,10 +12,8 @@ def index():
     # Get the IP address of the server
     server_ip = request.host.split(':')[0]
 
-    return {
-        'current_date': current_date,
-        'server_ip': server_ip
-    }
+    return render_template('index.html', current_date=current_date, server_ip=server_ip)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
